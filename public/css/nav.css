@@ -1,0 +1,137 @@
+input#toggle {
+    display: none;
+}
+
+input#toggle:checked+.nav__right-wrapper {
+    display: block;
+    z-index: 10000;
+    position: relative;
+}
+
+.nav {
+    display: block;
+    width: 100%;
+    background: tomato;
+    font-family: sans-serif;
+    height: 5em;
+    z-index: 100;
+}
+
+.nav .item {
+    text-decoration: none;
+    color: peachpuff;
+}
+
+.nav__left,
+.nav__right {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__left {
+    display: flex;
+    height: 100%;
+}
+
+.nav__left-wrapper {
+    display: inline-block;
+    height: 100%;
+}
+
+.nav__left .nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__left .item {
+    padding: 0 1em;
+}
+
+.nav__left .item-logo {
+    color: antiquewhite;
+    text-transform: uppercase;
+}
+
+.nav__right-wrapper {
+    display: none;
+    text-align: center;
+    background: tomato;
+}
+
+.nav__right-wrapper .item {
+    padding: 1em 0;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+
+.nav__right-wrapper .item:hover {
+    background: #ff7056;
+}
+
+.nav__toggle {
+    display: inline-block;
+    float: right;
+    width: 5em;
+    background: tan;
+    z-index: 2;
+}
+
+.nav__toggle .flex {
+    height: 100%;
+    justify-content: center;
+}
+
+.nav__toggle-text {
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    line-height: 5em;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: tomato;
+        font-family: sans-serif;
+    }
+    .nav__left,
+    .nav__right {
+        display: flex;
+        height: 100%;
+    }
+    .nav__right {
+        justify-content: flex-end;
+    }
+    .nav__right-wrapper {
+        display: flex;
+    }
+    .nav__right .nav__list {
+        padding: 0 0.5em;
+        display: flex;
+    }
+    .nav__toggle {
+        display: none;
+    }
+    .nav .item {
+        border: none;
+        /*height: 100%;*/
+    }
+    .nav .item:hover {
+        background: transparent;
+        color: white;
+    }
+    .nav .item-logo {
+        color: antiquewhite;
+        text-transform: uppercase;
+    }
+    .nav .item:not(.item-logo) {
+        color: peachpuff;
+    }
+}

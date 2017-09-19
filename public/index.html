@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TheSethParrish</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/input.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<!-- Import and initialize the Firebase SDK 
+    {app,auth,database,messaging,storage} -->
+<script src="/__/firebase/3.7.4/firebase-app.js"></script>
+<script src="/__/firebase/3.7.4/firebase-auth.js"></script>
+<script src="/__/firebase/3.7.4/firebase-database.js"></script>
+<script src="/__/firebase/init.js"></script>
+
+<body>
+    <nav class="nav">
+        <div class="nav__left-wrapper">
+            <ul class="nav__left">
+                <li class="nav__list">
+                    <a id="logo" class="item item-logo"><strong>Logo</strong></a>
+                </li>
+                <li class="nav__list">
+                    <a class="item" id="headerName">Name</a>
+                </li>
+            </ul>
+        </div>
+        <label for="toggle" class="nav__toggle">
+     <a class="nav__toggle-text"><i style="position: relative; top: 4px;" class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+  </label>
+        <input type="checkbox" id="toggle" />
+        <div class="nav__right-wrapper">
+            <ul class="nav__right">
+                <li class="nav__list">
+                    <a class="item" id="loginButton" onclick="googleLogin()">Login</a>
+                </li>
+                <li class="nav__list">
+                    <a class="item" href="javascript:;" onclick="testNotification('HI', 'favicon.ico', 'Looks like this works', 'https://google.com')">Local Notification</a>
+                </li>
+                <li class="nav__list">
+                    <a class="item" href="">item 3</a>
+                </li>
+                <li class="nav__list">
+                    <a class="item" href="">item 4</a>
+                </li>
+                <li class="nav__list">
+                    <a class="item" href="">item 5</a>
+                </li>
+                <li class="nav__list">
+                    <a class="item" href="">item 6</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <p id="desc">Loading...</p>
+
+    <div class="text-input">
+        <input type="text" id="input1" placeholder="Try typing something in here!">
+        <label for="input1">Title</label>
+    </div>
+    <div class="text-input">
+        <input type="text" id="input2" placeholder="Try typing something in here!">
+        <label for="input2">Body</label>
+    </div>
+
+    <button id="button-three" style="margin-top: 20px;" onclick="updateFields();">Update Fields</button>
+    <button id="button-three" onclick="sendNotification();">Send Global Notification!</button>
+
+</body>
+
+<script src="js/index.js"></script>
+<script src="js/notify.js"></script>
+<script src="js/login.js"></script>
+
+</html>
