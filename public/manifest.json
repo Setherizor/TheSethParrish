@@ -2,7 +2,6 @@
     "//": "Some browsers will use this to enable push notifications.",
     "//": "It is the same for all projects, this is not your project's sender ID",
     "gcm_sender_id": "103953800507",
-
     "display": "standalone",
     "dir": "ltr",
     "lang": "en-US",
@@ -10,18 +9,16 @@
     "background_color": "rgb(144, 202, 249)",
     "theme_color": "aliceblue",
     "scope": "/",
-
     "short_name": "TheSethParrish",
     "name": "Seth's App of Experiementation",
     "description": "The app that does all sorts of fun things!",
-
     "serviceworker": {
         "src": "js/sw.js",
         "scope": "/",
         "use_cache": true
     },
-
-    "icons": [{
+    "icons": [
+        {
             "src": "launcher-icon-1x.png",
             "type": "image/png",
             "sizes": "48x48"
