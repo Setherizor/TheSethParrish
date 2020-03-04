@@ -1,0 +1,23 @@
+{
+  "config" : {
+    "body" : {
+      "background" : "teal",
+      "color" : "white",
+      "desc" : "This is a website I made a while back :)"
+    },
+    "nav" : {
+      "color" : "peachpuff",
+      "logo" : "<i class='fa fa-user-circle fa-4x' aria-hidden='true'></i>",
+      "logo-color" : "antiquewhite",
+      "main" : "purple",
+      "toggle" : "tan"
+    }
+  },
+  "notify" : {
+    "URL" : "https://google.com",
+    "body" : "OMG",
+    "icon" : "https://avatars.devrant.io/v-11_c-1_b-1_g-m_9-1_1-1_16-6_3-4_8-1_7-1_5-1_12-1_6-7_10-4_2-15_15-19_18-1_4-1_19-1.png",
+    "send" : "false",
+    "title" : "HI"
+  }
+}
